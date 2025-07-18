@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
 import { useState } from 'react'
 
+import logo from '../assets/logos/instacat-logo.png';
 import home from "../assets/svgs/home.svg"
 import search from "../assets/svgs/search.svg"
 import explore from "../assets/svgs/explore.svg"
@@ -101,7 +102,7 @@ export function SideBar() {
     <>
       <section className="side-bar">
         <div className="logo">
-          <Link to="/" ><img src="/img/instacat-logo.png" alt="Instagram logo" width="100%" height="100%" /></Link>
+          <Link to="/" ><img src={logo} alt="Instagram logo" width="100%" height="100%" /></Link>
         </div>
         <div className='sidebar-main-links'>
           {sideBarItems.map((item, index) => <SideBarItem key={index} {...item} />)}
